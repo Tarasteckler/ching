@@ -115,3 +115,35 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
+
+function getFaves(){
+    document.getElementById("output3").innerHTML = faves();
+}
+
+function faves(){
+    var strCategory = document.getElementById("faves").value;
+    var numCat = parseInt(strCategory);
+    console.log(typeof strCategory);
+    console.log(typeof numCat);
+
+    if (numCat === 1){
+        return "1. Aquamarine" + "<br>" + "2. Princess Diaries" + "<br>" + "3. Princess Diaries 2: Royal Engagement" + "<br>" +
+        "4. Across the Universe" + "<br>" + "5. Elf" + "<br>" + "6. Annie" + "<br>" + "7. Sisterhood of the Traveling Pants"
+            + "<br>" + "8. Mamma Mia" + "<br>" + "9. Hairspray" + "<br>" + "10. Shrek";
+    }
+    if (numCat === 2){
+        return "1. The Office" + "<br>" + "2. Broad City" + "<br>" + "3. Narcos" + "<br>" + "4. Breaking Bad" + "<br>" +
+            "5. Gilmore Girls" + "<br>" + "6. Portlandia" + "<br>" + "7. Gossip Girl" + "<br>" + "8. Planet Earth" + "<br>" +
+            "9. Friends" + "<br>" + "10. Freaks and Geeks";
+    }
+    if (numCat === 3){
+        return "1. Beyonce" + "<br>" + "2. The Beatles" + "<br>" + "3. Kendrick Lamar" + "<br>" + "4. Tame Impala" + "<br>" +
+            "5. The Grateful Dead" + "<br>" + "6. Ms. Lauryn Hill" + "<br>" + "7. Frank Ocean" + "<br>" + "8. Kanye West" + "<br>" +
+            "9. Amy Winehouse" + "<br>" + "10. A Tribe Called Quest";
+    }
+    if (numCat === 4){
+        return "1. Pano" + "<br>" + "2. Joshua Tree" + "<br>" + "3. 1301 Oxford St, Berkeley, CA" + "<br>" + "4. Desolation Wilderness" +
+             "<br>" + "5. Anywhere in an Eno hammock" + "<br>" + "6. LHS" + "<br>" + "7. Gordo Taqueria" + "<br>" + "8. Infinity" +
+            "pool in Italy" + "<br>" + "9. Grizzly Peak" + "<br>" + "10. Home";
+    }
+}
