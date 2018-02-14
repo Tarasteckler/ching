@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ching</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+<h1 class="header">The Ching Girls</h1>
+<!--<img src="img/home.png" id="home">-->
+<table class="menu" cellpadding="20px" cellspacing="15px">
+    <tr><td class="hover" id="musicLib" style="width:23%">Music Library</td>
+    <td class="hover" id="pics" style="width:23%">Photo Collection</td>
+    <td class="hover" id="us" style="width:23%">About Us</td>
+    <td class="hover" id="fun" style="width:23%">Fun Facts</td></tr>
+</table>
+
+<table id="firstPics" cellpadding="50px">
+    <tr>
+        <td><img src="img/melting.jpg" class="image1"/></td>
+        <td><img src="img/bay2breakers.jpg" height="10%" class="image3"/></td>
+        <td><img src= "img/screamingqueens.jpg" class="image2"/>
+    </tr>
+</table>
+<div id="songInfo">
+    <h3>
+        Select an album to learn more!
+    </h3>
+    <table id="albums" cellpadding="15px" cellspacing="15px" border="0px">
+        <tr>
+            <td id="ching" class="alb">Come Ching With Us: The Classics</td>
+            <td id="chingmas" class="alb">Merry Chingmas: The Christmas Album</td>
+        </tr>
+    </table>
+</div>
+
+<div id="classics">
+    <select id="song" class="b1">
+        <option value="1">"In the Pool"</option>
+        <option value="2">"Harry Potter"</option>
+        <option value="3">"The Log"</option>
+        <option value="4">"Sea Mammoth"</option>
+        <option value="5">"Fondant"</option>
+    </select>
+
+    <button  class="b1" onclick="getLyrics()">Get lyrics!</button><br><br>
+    <div id="output" class="output"></div>
+</div>
+
+<div id="xmas">
+    <select id="song2" class="b1">
+        <option value="6">"Chingle Bells"</option>
+        <option value="7">"Rudolph the Ching Nosed Reinching"</option>
+        <option value="8">"We Wish You a Merry Chingmas"</option>
+    </select>
+
+    <button class="b1" onclick="getLyrics2()">Get lyrics!</button><br><br>
+    <div id="output2" class="output"></div>
+</div>
+
+<div id="aboutUs">
+    <h3>
+        Our founding
+    </h3>
+    <p>
+        It all started in Italy. 2009. We were winding through the Chianti region with our parents and little
+        brother, Sam. Out of the blue, a beautiful melody drifted into our minds, as if handed down from an angel.
+        That evening, over a dinner of saltless bread and delicious pasta, we developed that melody into a glorious,
+        Italian-inspired song: "In the Pool" (lyrics will come later). The Ching Girls had been born.
+    </p>
+</div>
+<div id="fav">
+    <h3>
+        Explore our FAVORITES by selecting a category below!
+    </h3>
+
+    <select id="faves" class="b1">
+        <option value="1">Movies</option>
+        <option value="2">TV shows</option>
+        <option value="3">Singers</option>
+        <option value="4">Locations</option>
+    </select>
+
+    <button  id="gettingFaves" class="b1">Submit</button><br><br>
+    <table id="favoriteResults" border="0px" cellspacing="5px" cellpadding="10px"></table>
+</div>
+
+</body>
+</html>

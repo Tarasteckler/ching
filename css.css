@@ -1,0 +1,111 @@
+
+
+#albums{
+    font-family: arial, sans-serif;
+}
+
+
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffe6f2), to(#e6005c)) fixed;
+}
+
+.hover{
+    background-color: #cc0066;
+    color: white;
+    border-radius: 2px;
+    height: 45px;
+    font-size: 25px;
+}
+
+.hover:hover{
+    background-color:  #732673;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.alb{
+    background-color: #53a0f9;
+    color: black;
+    border-radius: 2px;
+    height: 30px;
+    font-size: 25px;
+}
+
+.alb:hover{
+    background-color: #004d99;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.menu{
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+.output{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: arial, sans-serif;
+
+}
+
+h3, p, #favoriteResults{
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+h4{
+    font-size: 175%;
+    font-family: arial, sans-serif;
+}
+
+#output{
+    color: black;
+    font-family: arial, sans-serif;
+}
+
+.b1 {
+    background-color: white;
+    margin-right:auto;
+    margin-left:auto;
+    color: black;
+    font-family: arial, sans-serif;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+}
+
+#classics, #xmas, #aboutUs, #fav{
+    text-align: center;
+}
+
+h5{
+    color: white;
+    font-family: arial, sans-serif;
+}
+
+h6 {
+    font-family: arial, sans-serif;
+    font-size: 300%;
+    color: steelblue;
+    text-align: center;
+}
+
+table{
+    margin-right: auto;
+    margin-left:auto;
+}
+.header {
+    background: url(img/gradient2.png) -80px -80px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    font-size: 90px;
+    font-family: arial, sans-serif;
+    width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+
