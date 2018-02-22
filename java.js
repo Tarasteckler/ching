@@ -4,13 +4,28 @@ $(document).ready(function(){
     $("#xmas").hide();
     $("#fav").hide();
     $("#aboutUs").hide();
+    $("#slideshow-container").hide();
+    $(".mySlides").hide();
+    $(".prev").hide();
+    $(".next").hide();
+    $(".dot").hide();
+    $(".instructions").hide();
+
+
     $("#musicLib").on("click", function(){
         $("#classics").hide();
         $("#xmas").hide();
         $("#fav").hide();
         $("#aboutUs").hide();
         $("#firstPics").hide();
+        $("#slideshow-container").hide();
+        $(".mySlides").hide();
+        $(".prev").hide();
+        $(".next").hide();
+        $(".dot").hide();
+        $(".instructions").hide();
         $("#songInfo").show();
+
     });
     $("#pics").on("click", function(){
         $("#songInfo").hide();
@@ -19,7 +34,12 @@ $(document).ready(function(){
         $("#fav").hide();
         $("#aboutUs").hide();
         $("#firstPics").hide();
-        $("#pic").show();
+        $("#slideshow-container").show();
+        $(".prev").show();
+        $(".next").show();
+        $(".dot").show();
+        $(".instructions").show();
+
     });
     $("#us").on("click", function(){
         $("#fav").hide();
@@ -27,6 +47,12 @@ $(document).ready(function(){
         $("#classics").hide();
         $("#xmas").hide();
         $("#songInfo").hide();
+        $("#slideshow-container").hide();
+        $(".mySlides").hide();
+        $(".prev").hide();
+        $(".next").hide();
+        $(".dot").hide();
+        $(".instructions").hide();
         $("#aboutUs").show();
     });
     $("#fun").on("click", function(){
@@ -36,6 +62,12 @@ $(document).ready(function(){
         $("#classics").hide();
         $("#xmas").hide();
         $("#aboutUs").hide();
+        $("#slideshow-container").hide();
+        $(".mySlides").hide();
+        $(".prev").hide();
+        $(".next").hide();
+        $(".dot").hide();
+        $(".instructions").hide();
         $("#fav").show();
     });
     $("#ching").on("click", function(){
@@ -57,6 +89,10 @@ $(document).ready(function(){
     });
 
 });
+
+function hideInst(){
+    $(".instructions").hide();
+}
 
 function getLyrics(){
     document.getElementById("output").innerHTML = "";
@@ -141,46 +177,59 @@ function getLyrics2(){
     document.getElementById("output2").innerHTML = determineLyrics(songNum);
 }
 
-// function getFaves(){
-//     document.getElementById("favoriteResults").innerHTML = faves();
-// }
-//
-// function faves(){
-//     var strCategory = document.getElementById("faves").value;
-//     var numCat = parseInt(strCategory);
-//
-//     if (numCat === 1){
-//         return "1. Aquamarine" + "<br>" + "2. Princess Diaries" + "<br>" + "3. Princess Diaries 2: Royal Engagement" + "<br>" +
-//             "4. Across the Universe" + "<br>" + "5. Elf" + "<br>" + "6. Annie" + "<br>" + "7. Sisterhood of the Traveling Pants"
-//             + "<br>" + "8. Mamma Mia" + "<br>" + "9. Hairspray" + "<br>" + "10. Shrek";
-//     }
-//     if (numCat === 2){
-//         return "1. The Office" + "<br>" + "2. Broad City" + "<br>" + "3. Narcos" + "<br>" + "4. Breaking Bad" + "<br>" +
-//             "5. Gilmore Girls" + "<br>" + "6. Portlandia" + "<br>" + "7. Gossip Girl" + "<br>" + "8. Planet Earth" + "<br>" +
-//             "9. Friends" + "<br>" + "10. Freaks and Geeks";
-//     }
-//     if (numCat === 3){
-//         return "1. Beyonce" + "<br>" + "2. The Beatles" + "<br>" + "3. Kendrick Lamar" + "<br>" + "4. Tame Impala" + "<br>" +
-//             "5. The Grateful Dead" + "<br>" + "6. Ms. Lauryn Hill" + "<br>" + "7. Frank Ocean" + "<br>" + "8. Kanye West" + "<br>" +
-//             "9. Amy Winehouse" + "<br>" + "10. A Tribe Called Quest";
-//     }
-//     if (numCat === 4){
-//         return "1. Pano" + "<br>" + "2. Joshua Tree" + "<br>" + "3. 1301 Oxford St, Berkeley, CA" + "<br>" + "4. Desolation Wilderness" +
-//             "<br>" + "5. Anywhere in an Eno hammock" + "<br>" + "6. LHS" + "<br>" + "7. Gordo Taqueria" + "<br>" + "8. Infinity " +
-//             "pool in Italy" + "<br>" + "9. Grizzly Peak" + "<br>" + "10. Home";
-//     }
-// }
-
-//MAKE GETFAVES WORK!
-
 function getFaves(){
     output = "";
-    var strCategory = document.getElementById("faves").value;
-    var numCat = parseInt(strCategory);
+    var numCat = parseInt(document.getElementById("faves").value);
     if (numCat === 1){
-        output = "<tr>1. Aquamarine</tr><tr>2. Princess Diaries</tr><tr>" +
-            "3. Princess Diaries 2: Royal Engagement</tr><tr>4. Across the Universe</tr><tr>5. Elf</tr>";
+        output = "<li>Aquamarine</li><li>Princess Diaries</li><li>Princess Diaries 2: Royal Engagement" +
+            "</li><li>Across the Universe</li><li>Elf</li><li>Annie</li><li>Sisterhood of the Traveling Pants</li>" +
+            "<li>Mamma Mia</li><li>Hairspray</li><li>Shrek</li>";
+    }
+    if (numCat === 2){
+        output = "<li>The Office</li><li>Broad City</li><li>Narcos</li><li>Breaking Bad</li>" +
+            "<li>Gilmore Girls</li><li>Portlandia</li><li>Gossip Girl</li><li>Planet Earth</li><li>Friends</li>" +
+            "<li>Freaks and Geeks</li>";
+    }
+    if (numCat === 3){
+        output = "<li>Beyoncé</li><li>The Beatles</li><li>Kendrick Lamar</li><li>Tame Impala</li><li>The Grateful Dead</li>" +
+            "<li>Ms. Lauryn Hill</li><li>Frank Ocean</li><li>Kanye West</li><li>Amy Winehouse</li><li>The Dixie Chicks</li>";
+    }
+    if (numCat === 4){
+        output = "<li>Pano</li><li>Desolation Wilderness</li><li>Joshua Tree</li><li>1301 Oxford St, Berkeley CA</li>" +
+            "<li>Anywhere in an Eno hammock</li><li>LHS</li><li>Gordo Taqueria</li><li>In the pool in Italy</li><li>" +
+            "Grizzly Peak</li><li>Home</li>";
     }
     document.getElementById("favoriteResults").innerHTML = output;
 }
 
+//slideshow
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    console.log(slides);
+    var dots = document.getElementsByClassName("dot");
+    if ( n > slides.length) {slideIndex = 1}
+    if ( n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    console.log(slides[slideIndex-1]);
+    dots[slideIndex-1].className += " active";
+}
